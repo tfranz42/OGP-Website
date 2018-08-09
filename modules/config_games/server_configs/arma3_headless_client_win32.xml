@@ -6,9 +6,6 @@
   <game_name>Arma 3 Headless Client</game_name>
   <server_exec_name>arma3server.exe</server_exec_name>
   <cli_template> %MEMORY% -client -nosound %IP% %PORT% %LOG%</cli_template>
-  <cli_params>
-   <cli_param cli_string="-port=" id="PORT"/>
-  </cli_params>
   <cli_allow_chars>;</cli_allow_chars> <!-- escaped by default: \ " ' | & ; > < ` $ ( ) [ ] -->
   <max_user_amount>1</max_user_amount>
   <mods>
@@ -38,7 +35,7 @@
    </param>
    <param id="PORT" key="-port=" type="text">
     <option>ns</option>
-    <default>2042</default>
+    <default>2302</default>
     <caption>Port Number of Target Server</caption>
     <desc>Port of target dedicated ARMA3 server.</desc>
    </param>
