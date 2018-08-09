@@ -71,7 +71,7 @@
     <caption>Mods</caption>
     <desc>Loads the specified sub-folders for different mods. Separated by semi-colons. Absolute path and multiple stacked folders are possible. In Linux multiple folders arguments need the following separation syntax: -mod=mod1\;mod2\;mod3</desc>
    </param>
-   <param id="SERVMOD" key="-servermod=" type="text">
+   <param id="SERVMOD" key="-serverMod=" type="text">
     <option>ns</option>
     <default></default>
     <caption>Server Mods</caption>
