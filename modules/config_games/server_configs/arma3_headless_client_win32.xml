@@ -13,8 +13,14 @@
   <max_user_amount>1</max_user_amount>
   <mods>
    <mod key='Arma3'>
-    <name>none</name>
+    <name>Default</name>
     <installer_name>233780</installer_name>
+   </mod>
+   <mod key='Arma3_2'
+    <name>Profiling/Performance Build USE WITH CAUTION</name>
+    <installer_name>233780</installer_name>
+    <betaname>profiling</betaname>
+    <betapwd>CautionSpecialProfilingAndTestingBranchArma3</betapwd>
    </mod>
   </mods>
   <server_params>
