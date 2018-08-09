@@ -5,7 +5,7 @@
   <installer>steamcmd</installer>
   <game_name>Arma 3</game_name>
   <server_exec_name>arma3server_x64.exe</server_exec_name>
-  <cli_template>-config=server.cfg -cfg=basic.cfg -profiles=profile %MEMORY% %PORT% %PLAYERS% %PASSWORD% %LOG% %INIT%</cli_template>
+  <cli_template>-config=server.cfg -cfg=basic.cfg -profiles=profile %MEMORY% %PORT% %PLAYERS% %PASSWORD% %LOG% %INIT% %MOD% %SERVMOD%</cli_template>
   <cli_params>
    <cli_param cli_string="-port=" id="PORT"/>
    <cli_param cli_string="-maxplayers=" id="PLAYERS"/>
@@ -59,6 +59,18 @@
    <param key="-autoinit" type="checkbox_key_value" id="INIT">
     <caption>Automatically initialize mission just like first client does.</caption>
     <desc>Note: Server config file (server.cfg) must contain "Persistent=1;", if it's 0 autoInit skips. Warning: This will break the Arma_3_Mission_Parameters function, so do not use it when you work with mission parameters, only default values are returned!</desc>
+   </param>
+   <param id="MOD" key="-mod=" type="text">
+    <option>ns</option>
+    <default></default>
+    <caption>Mods</caption>
+    <desc>Loads the specified sub-folders for different mods. Separated by semi-colons. Absolute path and multiple stacked folders are possible. Complex example test;x\test;c:\arma3\test2</desc>
+   </param>
+   <param id="SERVMOD" key="-serverMod=" type="text">
+    <option>ns</option>
+    <default></default>
+    <caption>Server Mods</caption>
+    <desc>Loads the specified sub-folders for different server-side (not broadcasted to clients) mods. Separated by semi-colons. Absolute path and multiple stacked folders are possible. Complex example test;x\test;c:\arma3\test2</desc>
    </param>
   </server_params>
 </game_config>
