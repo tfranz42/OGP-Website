@@ -5,7 +5,7 @@
   <installer>steamcmd</installer>
   <game_name>Arma 3 Headless Client</game_name>
   <server_exec_name>arma3server_x64.exe</server_exec_name>
-  <cli_template> %MEMORY% -client -nosound %IP% </cli_template>
+  <cli_template> %MEMORY% -client -nosound %IP% %PORT% %LOG%</cli_template>
   <cli_params>
    <cli_param cli_string="-port=" id="PORT"/>
   </cli_params>
@@ -29,6 +29,16 @@
     <default>localhost</default>
     <caption>IP address of Target Server</caption>
     <desc>IP address of target dedicated ARMA3 server. Ensure the server includes this servers external IP address to its Headless client list in server.cfg as well as the mission has the appropriate configuration for headless client usage. Reference https://community...ess_Client</desc>
+   </param>
+   <param id="PORT" key="-port=" type="text">
+    <option>ns</option>
+    <default>2042</default>
+    <caption>Port Number of Target Server</caption>
+    <desc>Port of target dedicated ARMA3 server.</desc>
+   </param>
+   <param key="-nologs" type="checkbox_key_value" id="LOG">
+    <caption>May improve performance</caption>
+    <desc>Be aware this means no errors are saved to RPT file (report log). Yet in case of crash the fault address block info is saved.</desc>
    </param>
   </server_params>
 </game_config>
