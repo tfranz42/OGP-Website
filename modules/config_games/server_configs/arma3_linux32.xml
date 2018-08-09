@@ -11,11 +11,17 @@
    <cli_param cli_string="-maxplayers=" id="PLAYERS"/>
   </cli_params>
   <cli_allow_chars>;</cli_allow_chars> <!-- escaped by default: \ " ' | & ; > < ` $ ( ) [ ] -->
-  <max_user_amount>64</max_user_amount>
+  <max_user_amount>120</max_user_amount>
   <mods>
    <mod key='Arma3'>
-    <name>none</name>
+    <name>Default</name>
     <installer_name>233780</installer_name>
+   </mod>
+   <mod key='Arma3_2'
+    <name>Profiling/Performance Build USE WITH CAUTION</name>
+    <installer_name>233780</installer_name>
+    <betaname>profiling</betaname>
+    <betapwd>CautionSpecialProfilingAndTestingBranchArma3</betapwd>
    </mod>
   </mods>
   <replace_texts>
@@ -44,6 +50,12 @@
     <default>1024</default>
     <caption>Max RAM allocated</caption>
     <desc>Maximum usable memory in MB, for example: 1024</desc>
+   </param>
+    <param id="PASSWORD" key="-password=" type="text">
+    <option>ns</option>
+    <default></default>
+    <caption>Server Password</caption>
+    <desc>Password for server access. If left empty no password will be required to join the server. !!NOT ADMIN PASSWORD!!</desc>
    </param>
   </server_params>
 </game_config>
