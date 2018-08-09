@@ -5,16 +5,19 @@
   <installer>steamcmd</installer>
   <game_name>Arma 3 Headless Client</game_name>
   <server_exec_name>arma3server</server_exec_name>
-  <cli_template> %MEMORY% -client -nosound %IP% </cli_template>
-  <cli_params>
-   <cli_param cli_string="-port=" id="PORT"/>
-  </cli_params>
+  <cli_template> %MEMORY% -client -nosound %IP% %PORT%</cli_template>
   <cli_allow_chars>;</cli_allow_chars> <!-- escaped by default: \ " ' | & ; > < ` $ ( ) [ ] -->
   <max_user_amount>1</max_user_amount>
   <mods>
    <mod key='Arma3'>
-    <name>none</name>
+    <name>Default</name>
     <installer_name>233780</installer_name>
+   </mod>
+   <mod key='Arma3_2'
+    <name>Profiling/Performance Build USE WITH CAUTION</name>
+    <installer_name>233780</installer_name>
+    <betaname>profiling</betaname>
+    <betapwd>CautionSpecialProfilingAndTestingBranchArma3</betapwd>
    </mod>
   </mods>
   <server_params>
@@ -28,7 +31,13 @@
     <option>ns</option>
     <default>localhost</default>
     <caption>IP address of Target Server</caption>
-    <desc>IP address of target dedicated ARMA3 server. Ensure the server includes this servers external IP address to its Headless client list in server.cfg as well as the mission has the appropriate configuration for headless client usage. Reference https://community...ess_Client</desc>
+    <desc>IP address of target dedicated ARMA3 server. Ensure the server includes this servers external IP address to its Headless client list in server.cfg as well as the mission has the appropriate configuration for headless client usage. Reference https://community.bistudio.com/wiki/Arma_3_Headless_Client</desc>
+   </param>
+   <param id="PORT" key="-port=" type="text">
+    <option>ns</option>
+    <default>2042</default>
+    <caption>Port Number of Target Server</caption>
+    <desc>Port of target dedicated ARMA3 server.</desc>
    </param>
   </server_params>
 </game_config>
