@@ -5,7 +5,7 @@
   <installer>steamcmd</installer>
   <game_name>Arma 3 Headless Client</game_name>
   <server_exec_name>arma3server.exe</server_exec_name>
-  <cli_template> %MEMORY% -client -nosound %IP% %PORT% %LOG%</cli_template>
+  <cli_template> %MEMORY% -client -nosound %IP% %PORT% %LOG% %PASSWORD%</cli_template>
   <cli_allow_chars>;</cli_allow_chars> <!-- escaped by default: \ " ' | & ; > < ` $ ( ) [ ] -->
   <max_user_amount>1</max_user_amount>
   <mods>
@@ -38,6 +38,12 @@
     <default>2302</default>
     <caption>Port Number of Target Server</caption>
     <desc>Port of target dedicated ARMA3 server.</desc>
+   </param>
+   <param id="PASSWORD" key="-password=" type="text">
+    <option>ns</option>
+    <default></default>
+    <caption>Server Password</caption>
+    <desc>Password for server access. If left empty no password will be used to join server. !!NOT ADMIN PASSWORD!!</desc>
    </param>
    <param key="-nologs" type="checkbox_key_value" id="LOG">
     <caption>May improve performance</caption>
