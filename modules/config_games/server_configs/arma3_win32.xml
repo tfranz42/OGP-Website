@@ -72,7 +72,7 @@
     <caption>Mods</caption>
     <desc>Loads the specified sub-folders for different mods. Separated by semi-colons. Absolute path and multiple stacked folders are possible. Complex example test;x\test;c:\arma3\test2</desc>
    </param>
-   <param id="SERVMOD" key="-servermod=" type="text">
+   <param id="SERVMOD" key="-serverMod=" type="text">
     <option>ns</option>
     <default></default>
     <caption>Server Mods</caption>
