@@ -15,7 +15,7 @@
   <max_user_amount>120</max_user_amount>
   <mods>
    <mod key='Arma3'>
-    <name>Default</name>
+    <name>Stable</name>
     <installer_name>233780</installer_name>
    </mod>
    <mod key='Arma3_2'
@@ -74,13 +74,13 @@
     <option>ns</option>
     <default></default>
     <caption>Mods</caption>
-    <desc>Loads the specified sub-folders for different mods. Separated by semi-colons. Absolute path and multiple stacked folders are possible. In Linux multiple folders arguments need the following separation syntax: mod1\;mod2\;mod3</desc>
+    <desc>Loads the specified sub-folders for different mods. Separated by semi-colons. Absolute path and multiple stacked folders are possible.</desc>
    </param>
    <param id="SERVMOD" key="-serverMod=" type="text">
     <option>ns</option>
     <default></default>
     <caption>Server Mods</caption>
-    <desc>Loads the specified sub-folders for different server-side (not broadcasted to clients) mods. Separated by semi-colons. Absolute path and multiple stacked folders are possible. In Linux multiple folders arguments need the following separation syntax: mod1\;mod2\;mod3. </desc>
+    <desc>Loads the specified sub-folders for different server-side (not broadcasted to clients) mods. Separated by semi-colons. Absolute path and multiple stacked folders are possible.</desc>
    </param>
   </server_params>
 </game_config>
