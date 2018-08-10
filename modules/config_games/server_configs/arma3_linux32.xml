@@ -14,7 +14,7 @@
   <max_user_amount>120</max_user_amount>
   <mods>
    <mod key='Arma3'>
-    <name>Default</name>
+    <name>Stable</name>
     <installer_name>233780</installer_name>
    </mod>
    <mod key='Arma3_2'
