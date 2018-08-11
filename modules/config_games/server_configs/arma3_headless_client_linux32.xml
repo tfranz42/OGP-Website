@@ -5,7 +5,7 @@
   <installer>steamcmd</installer>
   <game_name>Arma 3 Headless Client</game_name>
   <server_exec_name>arma3server</server_exec_name>
-  <cli_template> %MEMORY% -client -nosound %IP% %PORT% %PASSWORD% %LOG%</cli_template>
+  <cli_template> %MEMORY% -client -nosound %IP% %PORT% %PASSWORD% %LOG% %MOD%</cli_template>
   <cli_allow_chars>;</cli_allow_chars> <!-- escaped by default: \ " ' | & ; > < ` $ ( ) [ ] -->
   <max_user_amount>1</max_user_amount>
   <mods>
@@ -45,9 +45,15 @@
     <caption>Server Password</caption>
     <desc>Password for server access. If left empty no password will be used to join server. !!NOT ADMIN PASSWORD!!</desc>
    </param>
-   <param key="-nologs" type="checkbox_key_value" id="LOG">
+   <param id="LOG" key="-nologs" type="checkbox_key_value">
     <caption>May improve performance</caption>
     <desc>Be aware this means no errors are saved to RPT file (report log). Yet in case of crash the fault address block info is saved.</desc>
    </param>
   </server_params>
+  <param id="MOD" key="-mod=" type="text">
+    <option>ns</option>
+    <default></default>
+    <caption>Mods</caption>
+    <desc>Loads the specified sub-folders for different mods. Separated by semi-colons. Absolute path and multiple stacked folders are possible. In Linux multiple folders arguments need the following separation syntax: mod1\;mod2\;mod3</desc>
+  </param>
 </game_config>
