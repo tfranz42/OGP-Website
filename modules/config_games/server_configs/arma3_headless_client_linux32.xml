@@ -5,12 +5,12 @@
   <installer>steamcmd</installer>
   <game_name>Arma 3 Headless Client</game_name>
   <server_exec_name>arma3server</server_exec_name>
-  <cli_template> %MEMORY% -client -nosound %IP% %PORT% %PASSWORD% %LOG% %MOD%</cli_template>
-  <cli_allow_chars>;</cli_allow_chars> <!-- escaped by default: \ " ' | & ; > < ` $ ( ) [ ] -->
+  <cli_template> %MEMORY% -client -nosound %IP% %PORT% %PASSWORD% %MOD%</cli_template>
+  <cli_allow_chars>;\</cli_allow_chars> <!-- escaped by default: \ " ' | & ; > < ` $ ( ) [ ] -->
   <max_user_amount>1</max_user_amount>
   <mods>
    <mod key='Arma3'>
-    <name>Default</name>
+    <name>Stable</name>
     <installer_name>233780</installer_name>
    </mod>
    <mod key='Arma3_2'
@@ -45,7 +45,7 @@
     <caption>Server Password</caption>
     <desc>Password for server access. If left empty no password will be used to join server. !!NOT ADMIN PASSWORD!!</desc>
    </param>
-   <param id="LOG" key="-nologs" type="checkbox_key_value">
+   <param key="-nologs" type="checkbox_key_value">
     <caption>May improve performance</caption>
     <desc>Be aware this means no errors are saved to RPT file (report log). Yet in case of crash the fault address block info is saved.</desc>
    </param>
